@@ -1,17 +1,31 @@
 
-/dist
-/tmp
+# Node Files #	
 /node_modules
 /bower_components
-jspm_packages
-system-config.js*
-app/**/*.js
-app/**/*.map
-typings
-aot/*
-dist/*
-yarn.lock
 npm-debug.log
-/e2e/*.js
-/e2e/*.map
+
+# Coverage #
+/coverage/
+
+# Dist #
+/dist
+/dist/**
+
+# Logs
+logs
+*.log
+
+# IDE #
+.idea/
+*.swp
+
+# Typing #
+/src/typings/tsd/
+/typings/
+/tsd_typings/
+
+# OS generated files #
 .DS_Store
+ehthumbs.db
+Icon?
+Thumbs.db
