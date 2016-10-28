@@ -1,0 +1,17 @@
+
+/dist
+/tmp
+/node_modules
+/bower_components
+jspm_packages
+system-config.js*
+app/**/*.js
+app/**/*.map
+typings
+aot/*
+dist/*
+yarn.lock
+npm-debug.log
+/e2e/*.js
+/e2e/*.map
+.DS_Store
