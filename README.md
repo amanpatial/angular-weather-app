@@ -2,7 +2,7 @@
 Weather App
 ===========
 
-Weather app is the web app for displaying the weather report from openweather.com
+Weather app is the web app for displaying the weather report from openweathermap.org
 
 ## Features
 
