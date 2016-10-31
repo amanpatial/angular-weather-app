@@ -2,9 +2,9 @@
 Weather App
 ===========
 
-Weather app is the web app for displaying the weather data from openweather.com
+Weather app is the web app for displaying the weather report from openweather.com
 
-## Feature
+## Features
 
 1. Display today weather
 2. Display forecast weather  
