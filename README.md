@@ -1,5 +1,15 @@
 # Angular2WeatherApp
 
+Weather app is the web app for displaying the weather data from openweather.com
+
+Features 
+
+Display today weather
+Display forecast weather  
+Search by city/Zip code 
+Open weather api integration 
+Convert celsius to fahrenheit
+
 This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.19-3.
 
 ## Development server
