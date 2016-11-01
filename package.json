@@ -1,41 +1,46 @@
 {
   "name": "angular2-weather-app",
-  "version": "1.0.0",
+  "version": "0.0.0",
+  "license": "MIT",
+  "angular-cli": {},
   "scripts": {
-    "start": "tsc && concurrently \"tsc -w\" \"lite-server\" ",
-    "lite": "lite-server",
-    "tsc": "tsc",
-    "tsc:w": "tsc -w"
+    "start": "ng serve",
+    "lint": "tslint \"src/**/*.ts\"",
+    "test": "ng test",
+    "pree2e": "webdriver-manager update",
+    "e2e": "protractor"
   },
-  "licenses": [
-    {
-      "type": "MIT",
-      "url": "https://github.com/angular/angular.io/blob/master/LICENSE"
-    }
-  ],
+  "private": true,
   "dependencies": {
-    "@angular/common": "~2.1.1",
-    "@angular/compiler": "~2.1.1",
-    "@angular/core": "~2.1.1",
-    "@angular/forms": "~2.1.1",
-    "@angular/http": "~2.1.1",
-    "@angular/platform-browser": "~2.1.1",
-    "@angular/platform-browser-dynamic": "~2.1.1",
-    "@angular/router": "~3.1.1",
-    "@angular/upgrade": "~2.1.1",
-    "angular-in-memory-web-api": "~0.1.13",
-    "bootstrap": "^3.3.7",
+    "@angular/common": "~2.1.0",
+    "@angular/compiler": "~2.1.0",
+    "@angular/core": "~2.1.0",
+    "@angular/forms": "~2.1.0",
+    "@angular/http": "~2.1.0",
+    "@angular/platform-browser": "~2.1.0",
+    "@angular/platform-browser-dynamic": "~2.1.0",
+    "@angular/router": "~3.1.0",
     "core-js": "^2.4.1",
-    "reflect-metadata": "^0.1.8",
     "rxjs": "5.0.0-beta.12",
-    "systemjs": "0.19.39",
-    "zone.js": "^0.6.25"
+    "ts-helpers": "^1.1.1",
+    "zone.js": "^0.6.23"
   },
   "devDependencies": {
-    "@types/core-js": "^0.9.34",
-    "@types/node": "^6.0.45",
-    "concurrently": "^3.0.0",
-    "lite-server": "^2.2.2",
-    "typescript": "^2.0.3"
+    "@types/jasmine": "^2.2.30",
+    "@types/node": "^6.0.42",
+    "angular-cli": "1.0.0-beta.19-3",
+    "codelyzer": "1.0.0-beta.1",
+    "jasmine-core": "2.4.1",
+    "jasmine-spec-reporter": "2.5.0",
+    "karma": "1.2.0",
+    "karma-chrome-launcher": "^2.0.0",
+    "karma-cli": "^1.0.1",
+    "karma-jasmine": "^1.0.2",
+    "karma-remap-istanbul": "^0.2.1",
+    "protractor": "4.0.9",
+    "ts-node": "1.2.1",
+    "tslint": "3.13.0",
+    "typescript": "~2.0.3",
+    "webdriver-manager": "10.2.5"
   }
 }

@@ -1,31 +1,34 @@
+# See http://help.github.com/ignore-files/ for more about ignoring files.
 
-# Node Files #	
+# compiled output
+/dist
+/tmp
+
+# dependencies
 /node_modules
 /bower_components
+
+# IDEs and editors
+/.idea
+/.vscode
+.project
+.classpath
+*.launch
+.settings/
+
+# misc
+/.sass-cache
+/connect.lock
+/coverage/*
+/libpeerconnection.log
 npm-debug.log
+testem.log
+/typings
 
-# Coverage #
-/coverage/
+# e2e
+/e2e/*.js
+/e2e/*.map
 
-# Dist #
-/dist
-/dist/**
-
-# Logs
-logs
-*.log
-
-# IDE #
-.idea/
-*.swp
-
-# Typing #
-/src/typings/tsd/
-/typings/
-/tsd_typings/
-
-# OS generated files #
+#System Files
 .DS_Store
-ehthumbs.db
-Icon?
 Thumbs.db
