@@ -10,25 +10,20 @@ import { WeatherService } from './weather.service';
   providers: [WeatherService]
 })
 export class WeatherComponent implements OnInit {
-
-  weathers: Weather[];
+  
+  errorMessage: string;
+  weathers: any[];
 
   constructor(private _weatherService: WeatherService){
-
   }
 
   ngOnInit():any {
   	//this.weathers = WEATHER_LIST;
-    //`this.weathers = this._weatherService.getWeatherItems();
-    this._weatherService.getWeatheritemsbyCity('Amritsar').subscribe( data => console.log(data.name , data.cod));
-  	// this.weathers = this._weatherService.getWeatheritemsbyCity()
-   //  .subscribe(
-
-   //    data => {
-   //      const weather = new Weather( data.name, data.name, data.cod);
-   //      weathers.push(weather);
-
-   //  })
+    //this.weathers = this._weatherService.getWeatherItems();
+    this._weatherService.getWeatherForecast('Amritsar')
+         .subscribe(data => {this.weathers = data}, 
+                    error =>  this.errorMessage = <any>error
+     );
   }
 
 }
