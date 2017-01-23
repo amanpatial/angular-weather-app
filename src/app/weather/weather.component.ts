@@ -4,8 +4,8 @@ import { Weather } from './weather';
 import { WeatherService } from './weather.service';
 @Component({
   selector: 'app-weather',
-  template: `<app-weather-item *ngFor="let weather of weathers" [item]="weather"></app-weather-item>`,
-  //templateUrl: './weather.component.html',
+  //template: `<app-weather-item *ngFor="let weather of weathers" [item]="weather"></app-weather-item>`,
+  templateUrl: './weather.component.html',
   styleUrls: ['./weather.component.css'],
   providers: [WeatherService]
 })

@@ -13,25 +13,25 @@ export class WeatherService {
 
   constructor(private http: Http) { }
   
-    getWeatherItems(){
+  getWeatherItems(){
     	return WEATHER_LIST;
-    } 
+  } 
 
-    getWeatheritemsbyCity(cityName): Observable<any>{
+  getWeatheritemsbyCity(cityName): Observable<any>{
 
     	 return this.http.get(this.baseUrl +'weather?q='+ cityName +'&appid='+ APPID)
     	 .map(response => response.json())
     	 .catch(this.handleError);
-    }
+  }
 
-   getWeatherForecast(cityName): Observable<any[]>{
+  getWeatherForecast(cityName): Observable<any[]>{
 
      return this.http.get(this.baseUrl+'forecast?q='+ cityName +'&appid='+ APPID)
      .map(response => this.extractData(response))
      .catch(this.handleError);
   }
 
-   private extractData(res: any) {
+  private extractData(res: any) {
     let body = res.json();
     return body.list || { };
   }
