@@ -19,14 +19,14 @@ export class WeatherService {
 
   getWeatheritemsbyCity(cityName): Observable<any>{
 
-    	 return this.http.get(this.baseUrl +'weather?q='+ cityName +'&appid='+ APPID)
+    	 return this.http.get(this.baseUrl +'weather?q='+ cityName +'&appid='+ APPID +'&units=metric')
     	 .map(response => response.json())
     	 .catch(this.handleError);
   }
 
   getWeatherForecast(cityName): Observable<any[]>{
 
-     return this.http.get(this.baseUrl+'forecast?q='+ cityName +'&appid='+ APPID)
+     return this.http.get(this.baseUrl+'forecast?q='+ cityName +'&appid='+ APPID +'&units=metric')
      .map(response => this.extractData(response))
      .catch(this.handleError);
   }

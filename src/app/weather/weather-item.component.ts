@@ -7,7 +7,7 @@ import { Weather } from './weather';
   //inputs: ['weatherItem']        
 })
 export class WeatherItemComponent {
-    @Input('item') weather: Weather;
+    @Input('WeatherItem') weather: Weather;
    // constructor(){ 
   //   this.weather = new Weather('Amritsar', 'Cloudy', 24); 
    // }

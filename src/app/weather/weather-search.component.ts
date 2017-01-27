@@ -1,21 +1,16 @@
 import {Component, OnInit} from '@angular/core';
-import {WeatherService} from "./weather.service";
+import {WeatherService} from './weather.service';
 import {Subject} from "rxjs/Subject";
 import { Weather } from './weather';
 
 @Component({
     selector: 'weather-search',
-    template: `
-        <section class="weather-search">
-            <form (ngSubmit)="onSubmit(input.value)">
-                <label for="city">City</label>
-                <input ngControl="location" type="text" id="city" (input)="onSearchLocation(input.value)" required #input>
-                <button type="submit">Search</button>
-            </form>
-        </section>
-    `
+    templateUrl: './weather-search.component.html',
 })
 export class WeatherSearchComponent implements OnInit {
+
+    errorMessage: string;
+    weatherForecastData: any[];
 
     constructor(private _weatherService:WeatherService) {
     }
@@ -24,7 +19,11 @@ export class WeatherSearchComponent implements OnInit {
     }
 
     onSubmit(cityName: string) {
-     console.log(cityName);
+    // console.log(cityName);
+     this._weatherService.getWeatherForecast(cityName)
+         .subscribe(data => {this.weatherForecastData = data}, 
+                    error =>  this.errorMessage = <any>error,            
+     );
     }
     
     onSearchLocation(cityName:string) {

@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input} from '@angular/core';
 import { Weather } from './weather';
 //import { WEATHER_LIST } from './weather.data';
 import { WeatherService } from './weather.service';
+
 @Component({
   selector: 'weather-list',
   //template: `<weather-item *ngFor="let weather of weathers" [item]="weather"></>`,
@@ -10,20 +11,25 @@ import { WeatherService } from './weather.service';
   providers: [WeatherService]
 })
 export class WeatherListComponent implements OnInit {
-  
+  //@Input('city') cityName: String;
+  @Input('WeatherForecastList') weathers: any;
   errorMessage: string;
-  weathers: any[];
+ // weathers: any[];
 
   constructor(private _weatherService: WeatherService){
+    //console.log(city);
   }
 
   ngOnInit():any {
+
   	//this.weathers = WEATHER_LIST;
     //this.weathers = this._weatherService.getWeatherItems();
-    this._weatherService.getWeatherForecast('Amritsar')
-         .subscribe(data => {this.weathers = data}, 
-                    error =>  this.errorMessage = <any>error
-     );
+    //console.log(cityName);
+
+    // this._weatherService.getWeatherForecast('Amritsar')
+    //      .subscribe(data => {this.weathers = data}, 
+    //                 error =>  this.errorMessage = <any>error
+    //  );
   }
 
 }

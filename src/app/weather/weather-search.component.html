@@ -1,0 +1,8 @@
+<section class="weather-search">
+            <form (ngSubmit)="onSubmit(input.value)"  >
+                <label for="city">City Name:</label>
+                <input ngControl="location" type="text" id="city" (input)="onSearchLocation(input.value)" required #input>
+                <button type="submit">Search</button>             
+            </form>          
+            <weather-list [WeatherForecastList]="weatherForecastData"></weather-list> 
+</section>

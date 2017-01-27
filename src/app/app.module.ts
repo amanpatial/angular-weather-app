@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { WeatherListComponent } from './weather/weather-list.component';
 import { WeatherItemComponent } from './weather/weather-item.component';
 import { WeatherSearchComponent } from './weather/weather-search.component';
+import {WeatherService} from './weather/weather.service';
 
 @NgModule({
 
@@ -20,7 +21,7 @@ import { WeatherSearchComponent } from './weather/weather-search.component';
   
   ],
   
-  providers: [],
+  providers: [WeatherService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
