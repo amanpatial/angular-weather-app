@@ -5,11 +5,11 @@ import { WeatherService } from './weather.service';
 @Component({
   selector: 'app-weather',
   //template: `<app-weather-item *ngFor="let weather of weathers" [item]="weather"></app-weather-item>`,
-  templateUrl: './weather.component.html',
-  styleUrls: ['./weather.component.css'],
+  templateUrl: './weather-list.component.html',
+  styleUrls: ['./weather-list.component.css'],
   providers: [WeatherService]
 })
-export class WeatherComponent implements OnInit {
+export class WeatherListComponent implements OnInit {
   
   errorMessage: string;
   weathers: any[];
