@@ -1,8 +1,8 @@
-<article class="weather-element">
-    <div class="col-1">
-        <h2> {{ weather.weather[0].main }}</h2>
-        <h4> {{ weather.weather[0].description }}</h4>
-        <p class="info">Wind speed (meter/sec): {{ weather.wind.speed }}</p>
+<article >
+    <div >
+        <h2 style="text-transform: uppercase;"> {{ weather.weather[0].main }}</h2>
+        <h3 > {{ weather.weather[0].description }}</h3>
+        <p >Wind speed (meter/sec): {{ weather.wind.speed }}</p>
         <span class="temperature">Temperature (celsius): {{ weather.main.temp }} </span>
         <p>{{ weather.dt_txt}}</p>
     </div>
