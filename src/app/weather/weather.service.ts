@@ -1,8 +1,9 @@
-import { Injectable } from '@angular/core';
+import { Injectable, Inject } from '@angular/core';
 import { WEATHER_LIST } from './weather.data';
 import { Http } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/Rx';
+import { APP_CONFIG, IAppConfig } from '../app.config';
 
 const APPID = '45f4dd45e0f724512ba044c5a2caf4bc';
 
@@ -11,7 +12,7 @@ export class WeatherService {
   
   private baseUrl='http://api.openweathermap.org/data/2.5/';
 
-  constructor(private http: Http) { }
+  constructor(@Inject(APP_CONFIG) private config: IAppConfig, private http: Http) { }
   
   getWeatherItems(){
     	return WEATHER_LIST;
