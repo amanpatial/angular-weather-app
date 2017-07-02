@@ -52,4 +52,5 @@ Method A - npm run lint
 Method B - Windows based command with backslash
 
 $ .\node_modules\.bin\tslint -c tslint.json  .\src\app\weather\weather.service.ts
+
 $ .\node_modules\.bin\tslint -c tslint.json  .\src\app\*\*.ts
