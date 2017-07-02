@@ -44,3 +44,11 @@ To get more help on the `angular-cli` use `ng --help` or go check out the [Angul
 ## Angular 2 Style Guide
 
 [Angular 2 Style Guide](https://angular.io/guide/styleguide)
+
+## Run all the tslint and codelyzer rules
+
+Method A - npm run lint
+
+Method B - Windows based command with backslash 
+$ .\node_modules\.bin\tslint -c tslint.json  .\src\app\weather\weather.service.ts
+$ .\node_modules\.bin\tslint -c tslint.json  .\src\app\*\*.ts
