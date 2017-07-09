@@ -18,10 +18,17 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 
 ## Run Production/QA configuration 
 
+#build
+ ng build --environment=prod --output-path=build/prod/
+#shorthand
+ ng b -prod --output-path=build/prod/
+
+#serve
 ng serve --environment=prod
 ng serve --environment=qa
-ng build --environment=prod --output-path=build/prod/
 
+#shorthand
+$ ng s -prod
 
 ## Code scaffolding
 
