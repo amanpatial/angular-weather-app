@@ -26,7 +26,12 @@ export class WeatherService {
 
   getWeatheritemsbyCity(cityName): Observable<any>{
 
-    	 return this.http.get(environment.baseUrl +'weather?q='+ cityName +'&appid='+ environment.appId +'&units=' + environment.units)
+    	 return this.http.get(
+         environment.baseUrl +
+         'weather?q='+ cityName +
+         '&appid='+ environment.appId +
+         '&units=' + environment.units
+         )
     	 .map(response => response.json())
     	 .catch(this.handleError);
   }

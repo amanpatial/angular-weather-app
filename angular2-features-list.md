@@ -1,10 +1,10 @@
 
-##  Angular 2 features 
+##  Angular2 features 
 
 1. Event and properties binding 
 2. $event passing as object 
 3. Bootstrap link 
-4. Routing 
+4. Routing and guard
 5. Create model/class
 6. Create header component
 7. Shared folder purpose 
@@ -17,3 +17,4 @@
 14. Static meesage in entire project 
 15. Multilangual
 16. Multiple environment
+17. paging control 

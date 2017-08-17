@@ -9,6 +9,7 @@ import { WeatherListComponent } from './weather/weather-list.component';
 import { WeatherItemComponent } from './weather/weather-item.component';
 import { WeatherSearchComponent } from './weather/weather-search.component';
 import {WeatherService} from './weather/weather.service';
+//import { PdfComponent } from './pdf/pdf.component';
 
 @NgModule({
 
@@ -18,7 +19,8 @@ import {WeatherService} from './weather/weather.service';
     AppComponent,
     WeatherSearchComponent,
     WeatherListComponent,
-    WeatherItemComponent,
+    WeatherItemComponent
+  //  PdfComponent,
   
   ],
   
