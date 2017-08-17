@@ -13,7 +13,6 @@ import { HeaderComponent } from './header/header.component';
 import { PageNotFoundComponent } from './page-not-found.component';
 import { AppRoutingModule }  from './app-routing.module';
 import { WeatherTodayComponent } from './weather-today/weather-today.component';
-//import { PdfComponent } from './pdf/pdf.component';
 
 @NgModule({
 
