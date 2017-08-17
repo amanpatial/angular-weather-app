@@ -5,5 +5,6 @@
         <p >Wind speed (meter/sec): {{ weather.wind.speed }}</p>
         <span class="temperature">Temperature (celsius): {{ weather.main.temp }} </span>
         <p>{{ weather.dt_txt}}</p>
+        <a [routerLink]="['/detail-report']">Detail Report</a>
     </div>
 </article>

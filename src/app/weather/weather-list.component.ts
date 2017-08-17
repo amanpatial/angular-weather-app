@@ -2,6 +2,7 @@ import { Component, OnInit, Input} from '@angular/core';
 import { Weather } from './weather';
 //import { WEATHER_LIST } from './weather.data';
 import { WeatherService } from './weather.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'weather-list',
@@ -16,7 +17,8 @@ export class WeatherListComponent implements OnInit {
   errorMessage: string;
  // weathers: any[];
 
-  constructor(private _weatherService: WeatherService){
+  constructor(private _weatherService: WeatherService,
+              private router: Router){
     //console.log(city);
   }
 
@@ -30,6 +32,10 @@ export class WeatherListComponent implements OnInit {
     //      .subscribe(data => {this.weathers = data}, 
     //                 error =>  this.errorMessage = <any>error
     //  );
-  }
+    }
+
+    gotoDetailpage(id: number): any {
+      this.router.navigate(['/detail-page', id]);
+    }
 
 }

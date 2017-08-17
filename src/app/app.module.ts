@@ -8,20 +8,25 @@ import { AppComponent } from './app.component';
 import { WeatherListComponent } from './weather/weather-list.component';
 import { WeatherItemComponent } from './weather/weather-item.component';
 import { WeatherSearchComponent } from './weather/weather-search.component';
-import {WeatherService} from './weather/weather.service';
+import { WeatherService } from './weather/weather.service';
+import { HeaderComponent } from './header/header.component';
+import { PageNotFoundComponent } from './page-not-found.component';
+import { AppRoutingModule }  from './app-routing.module';
+import { WeatherTodayComponent } from './weather-today/weather-today.component';
 //import { PdfComponent } from './pdf/pdf.component';
 
 @NgModule({
 
-  imports: [ BrowserModule, FormsModule, HttpModule ],
+  imports: [ BrowserModule, FormsModule, HttpModule, AppRoutingModule ],
 
   declarations: [
     AppComponent,
     WeatherSearchComponent,
     WeatherListComponent,
-    WeatherItemComponent
-  //  PdfComponent,
-  
+    WeatherItemComponent,
+    HeaderComponent,
+    PageNotFoundComponent,
+    WeatherTodayComponent
   ],
   
   providers: [WeatherService,  { provide: APP_CONFIG, useValue: AppConfig }],
