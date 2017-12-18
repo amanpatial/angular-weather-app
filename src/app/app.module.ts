@@ -14,9 +14,16 @@ import { PageNotFoundComponent } from './page-not-found.component';
 import { AppRoutingModule }  from './app-routing.module';
 import { WeatherTodayComponent } from './weather-today/weather-today.component';
 
+// import {TranslateModule} from '@ngx-translate/core';
+
 @NgModule({
 
-  imports: [ BrowserModule, FormsModule, HttpModule, AppRoutingModule ],
+  imports: [
+    BrowserModule,
+    FormsModule,
+    HttpModule,
+    AppRoutingModule
+   ],
 
   declarations: [
     AppComponent,
@@ -27,7 +34,7 @@ import { WeatherTodayComponent } from './weather-today/weather-today.component';
     PageNotFoundComponent,
     WeatherTodayComponent
   ],
-  
+
   providers: [WeatherService,  { provide: APP_CONFIG, useValue: AppConfig }],
   bootstrap: [AppComponent]
 })
