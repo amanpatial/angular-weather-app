@@ -14,14 +14,21 @@ Weather app is the little web app for displaying the weather report from openwea
 This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.19-3.
 
 ## Prerequisites  
-1. Install Node.js® (https://nodejs.org/en/download) and npm
-   # node -v 
-   # npm -v
+1. Install [Node.js®](https://nodejs.org/en/download) and npm
+    
+    node -v 
+    
+    npm -v
+    
 2. Install Angular cli
-   # npm install -g @angular/cli
+    
+    npm install -g @angular/cli
+    
 3. Install node packages 
-   # cd /go/to/app/directory having package.json
-   # npm install
+    
+    cd /go/to/app/directory having package.json
+    
+    npm install
    
 ## Development server
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
