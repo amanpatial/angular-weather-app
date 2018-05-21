@@ -17,7 +17,7 @@ UID=$(id -u)
 USER=$(id -u -n)
 
 echo "OS:" $OS
-echo "USER:" $OS
+echo "USER:" $USER
 
 #Developer Tools
 yum install gcc-c++ make
@@ -54,4 +54,4 @@ ng -v
 npm install
 
 #Build and bundle the code to destination directory
-ng b -prod --output-path=~/build/prod/
+ng b -prod --output-path=~/build/angular6-weather-app/prod/
