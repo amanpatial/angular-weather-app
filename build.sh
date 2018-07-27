@@ -1,6 +1,7 @@
 #!/bin/bash
 
 #Get Operating System Values
+#Get training test
 echo "Getting Operating System Values..."
 
 OS=$(awk '/DISTRIB_ID=/' /etc/*-release | sed 's/DISTRIB_ID=//' | tr '[:upper:]' '[:lower:]')
