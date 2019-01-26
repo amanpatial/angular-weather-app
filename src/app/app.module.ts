@@ -1,9 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
+import { HttpClientModule } from '@angular/common/http';
 import { APP_CONFIG, AppConfig } from './app.config';
-
 import { AppComponent } from './app.component';
 import { WeatherListComponent } from './weather/weather-list.component';
 import { WeatherItemComponent } from './weather/weather-item.component';
@@ -14,14 +13,12 @@ import { PageNotFoundComponent } from './page-not-found.component';
 import { AppRoutingModule }  from './app-routing.module';
 import { WeatherTodayComponent } from './weather-today/weather-today.component';
 
-// import {TranslateModule} from '@ngx-translate/core';
-
 @NgModule({
 
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule,
+    HttpClientModule,
     AppRoutingModule
    ],
 
