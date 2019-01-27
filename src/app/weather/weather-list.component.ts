@@ -1,4 +1,4 @@
-import { Component, OnInit, Input} from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { WeatherService } from './weather.service';
 import { Router } from '@angular/router';
 

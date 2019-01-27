@@ -10,7 +10,7 @@ import { WeatherSearchComponent } from './weather/weather-search.component';
 import { WeatherService } from './weather/weather.service';
 import { HeaderComponent } from './header/header.component';
 import { PageNotFoundComponent } from './page-not-found.component';
-import { AppRoutingModule }  from './app-routing.module';
+import { AppRoutingModule } from './app-routing.module';
 import { WeatherTodayComponent } from './weather-today/weather-today.component';
 
 @NgModule({
@@ -20,7 +20,7 @@ import { WeatherTodayComponent } from './weather-today/weather-today.component';
     FormsModule,
     HttpClientModule,
     AppRoutingModule
-   ],
+  ],
 
   declarations: [
     AppComponent,
@@ -32,7 +32,7 @@ import { WeatherTodayComponent } from './weather-today/weather-today.component';
     WeatherTodayComponent
   ],
 
-  providers: [WeatherService,  { provide: APP_CONFIG, useValue: AppConfig }],
+  providers: [WeatherService, { provide: APP_CONFIG, useValue: AppConfig }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

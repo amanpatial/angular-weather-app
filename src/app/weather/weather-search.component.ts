@@ -1,5 +1,5 @@
-import {Component, OnInit} from '@angular/core';
-import {WeatherService} from './weather.service';
+import { Component, OnInit } from '@angular/core';
+import { WeatherService } from './weather.service';
 
 @Component({
     selector: 'weather-search',
@@ -8,7 +8,7 @@ import {WeatherService} from './weather.service';
 export class WeatherSearchComponent implements OnInit {
 
     errorMessage: string;
-    weatherForecastData: any[];
+    weatherForecastData: any;
     disabledForecastButton: boolean;
     cityName: string;
 
@@ -20,7 +20,7 @@ export class WeatherSearchComponent implements OnInit {
     onSubmit(cityName: string) {
         console.log(cityName);
         this._weatherService.getWeatherForecast(cityName)
-         .subscribe(data => {this.weatherForecastData = data}, error => this.errorMessage = <any>error);
+            .subscribe(data => { this.weatherForecastData = data.list }, error => this.errorMessage = <any>error);
     }
 
     onSearchLocation(cityName: string) {
@@ -31,14 +31,14 @@ export class WeatherSearchComponent implements OnInit {
     onSubmitDatabinding() {
         console.log('Inside the two way', this.cityName);
         this._weatherService.getWeatherForecast(this.cityName)
-         .subscribe(data => {this.weatherForecastData = data}, error => this.errorMessage = <any>error);
+            .subscribe(data => { this.weatherForecastData = data.list }, error => this.errorMessage = <any>error);
         this.onResetControls();
     }
 
     onSearchLocationWithEvent(event: Event) {
-      console.log('Control value', (<HTMLInputElement>event.target).value);
-      this.cityName = (<HTMLInputElement>event.target).value;
-      this.disabledForecastButton = false;
+        console.log('Control event value', (<HTMLInputElement>event.target).value);
+        this.cityName = (<HTMLInputElement>event.target).value;
+        this.disabledForecastButton = false;
     }
 
     onResetControls() {

@@ -6,6 +6,6 @@ import { Weather } from './weather';
   templateUrl: './weather-item.component.html'
 })
 export class WeatherItemComponent {
-    // tslint:disable-next-line:no-input-rename
-    @Input('WeatherItem') weather: Weather;
+  // tslint:disable-next-line:no-input-rename
+  @Input('WeatherItem') weather: Weather;
 }
