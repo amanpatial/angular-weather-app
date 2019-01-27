@@ -1,4 +1,4 @@
-import {Weather} from "./weather";
+import { Weather } from './weather';
 export const WEATHER_LIST: Weather[] = [
     new Weather('Japan', 'CLoudy', 34),
     new Weather('China', 'Rainy', 24),

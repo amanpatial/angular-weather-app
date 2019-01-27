@@ -1,8 +1,8 @@
-<article >
-    <div >
+<article>
+    <div>
         <h2 style="text-transform: uppercase;"> {{ weather.weather[0].main }}</h2>
-        <h3 > {{ weather.weather[0].description }}</h3>
-        <p >Wind speed (meter/sec): {{ weather.wind.speed }}</p>
+        <h3> {{ weather.weather[0].description }}</h3>
+        <p>Wind speed (meter/sec): {{ weather.wind.speed }}</p>
         <span class="temperature">Temperature (celsius): {{ weather.main.temp }} </span>
         <p>{{ weather.dt_txt}}</p>
         <a [routerLink]="['/detail-report']">Detail Report</a>
