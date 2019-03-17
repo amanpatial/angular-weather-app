@@ -17,6 +17,7 @@ import { SignupComponent } from './auth/signup/signup.component';
 import { AuthService } from './auth/auth.service';
 import { AuthGuard } from './auth/auth-guard.service';
 import { SignoutComponent } from './auth/signout/signout.component';
+import { TemperatureConverterPipe } from './shared/enum/temperature-converter-pipe';
 
 @NgModule({
 
@@ -38,7 +39,8 @@ import { SignoutComponent } from './auth/signout/signout.component';
     WeatherTodayComponent,
     SigninComponent,
     SignupComponent,
-    SignoutComponent
+    SignoutComponent,
+    TemperatureConverterPipe
   ],
 
   providers: [WeatherService, AuthService, AuthGuard, { provide: APP_CONFIG, useValue: AppConfig }],

@@ -3,7 +3,9 @@
         <h2 style="text-transform: uppercase;"> {{ weather.weather[0].main }}</h2>
         <h3> {{ weather.weather[0].description  | uppercase }}</h3>
         <p>Wind speed (meter/sec): {{ weather.wind.speed }}</p>
-        <span class="temperature">Temperature (celsius): {{ weather.main.temp }} </span>
+        <span class="temperature">Temperature (celsius): {{ weather.main.temp }} </span> <br>
+        <span class="temperature">Temperature (Fahrenheit): {{ ( weather.main.temp | temperatureConverter:'F') }}
+        </span>
         <p>{{ weather.dt_txt | date:'medium' }}</p>
         <a [routerLink]="['/detail-report']">Detail Report</a>
     </div>
