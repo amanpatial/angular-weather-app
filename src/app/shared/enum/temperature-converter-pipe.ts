@@ -10,7 +10,7 @@ export class TemperatureConverterPipe implements PipeTransform {
                 return tempareature.toFixed(2);
             }
             if (unit === 'C') {
-                var tempareature = (value - 32) / 5 / 9;
+                var tempareature = (value - 32) * 5 / 9;
                 return tempareature.toFixed(2);
             }
         }
