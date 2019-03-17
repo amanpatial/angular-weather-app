@@ -10,6 +10,7 @@ export class WeatherTodayComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    //today: Date = Date.now();
   }
 
 }

@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { APP_CONFIG, AppConfig } from './app.config';
 import { AppComponent } from './app.component';
@@ -12,12 +12,18 @@ import { HeaderComponent } from './header/header.component';
 import { PageNotFoundComponent } from './page-not-found.component';
 import { AppRoutingModule } from './app-routing.module';
 import { WeatherTodayComponent } from './weather-today/weather-today.component';
+import { SigninComponent } from './auth/signin/signin.component';
+import { SignupComponent } from './auth/signup/signup.component';
+import { AuthService } from './auth/auth.service';
+import { AuthGuard } from './auth/auth-guard.service';
+import { SignoutComponent } from './auth/signout/signout.component';
 
 @NgModule({
 
   imports: [
     BrowserModule,
     FormsModule,
+    ReactiveFormsModule,
     HttpClientModule,
     AppRoutingModule
   ],
@@ -29,10 +35,13 @@ import { WeatherTodayComponent } from './weather-today/weather-today.component';
     WeatherItemComponent,
     HeaderComponent,
     PageNotFoundComponent,
-    WeatherTodayComponent
+    WeatherTodayComponent,
+    SigninComponent,
+    SignupComponent,
+    SignoutComponent
   ],
 
-  providers: [WeatherService, { provide: APP_CONFIG, useValue: AppConfig }],
+  providers: [WeatherService, AuthService, AuthGuard, { provide: APP_CONFIG, useValue: AppConfig }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
