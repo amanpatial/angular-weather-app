@@ -1,5 +1,6 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { Weather } from './weather';
+import { EmitterVisitorContext } from '@angular/compiler';
 
 @Component({
   selector: 'weather-item',
@@ -8,4 +9,16 @@ import { Weather } from './weather';
 export class WeatherItemComponent {
   // tslint:disable-next-line:no-input-rename
   @Input('WeatherItem') weather: Weather;
+  //declare event for subscription
+  @Output() weatherItemChanges = new EventEmitter();
+
+  ngOnInit(): any {
+  }
+
+  selectedWeatherItem(event: Event) {
+    var item = (<HTMLDivElement>event.target);
+    console.log('Selected div element', item);
+    //Raise event 
+    this.weatherItemChanges.emit(item.innerHTML);
+  }
 }

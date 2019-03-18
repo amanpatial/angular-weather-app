@@ -17,7 +17,7 @@ import { SignupComponent } from './auth/signup/signup.component';
 import { AuthService } from './auth/auth.service';
 import { AuthGuard } from './auth/auth-guard.service';
 import { SignoutComponent } from './auth/signout/signout.component';
-import { TemperatureConverterPipe } from './shared/enum/temperature-converter-pipe';
+import { TemperatureConverterPipe } from './shared/pipes/temperature-converter-pipe';
 
 @NgModule({
 
