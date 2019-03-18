@@ -4,19 +4,13 @@
 module.exports = function (config) {
   config.set({
     basePath: '',
-    frameworks: ['jasmine', 'angular-cli'],
+    frameworks: ['jasmine', '@angular-devkit/build-angular'],
     plugins: [
       require('karma-jasmine'),
       require('karma-chrome-launcher'),
       require('karma-remap-istanbul'),
-      require('angular-cli/plugins/karma')
+      require('@angular-devkit/build-angular/plugins/karma')
     ],
-    files: [
-      
-    ],
-    preprocessors: {
-      './src/test.ts': ['angular-cli']
-    },
     remapIstanbulReporter: {
       dir: require('path').join(__dirname, 'coverage'), reports: {
         html: 'coverage',
@@ -28,8 +22,8 @@ module.exports = function (config) {
       environment: 'dev'
     },
     reporters: config.angularCli && config.angularCli.codeCoverage
-              ? ['progress', 'karma-remap-istanbul']
-              : ['progress'],
+      ? ['progress', 'karma-remap-istanbul']
+      : ['progress'],
     port: 9876,
     colors: true,
     logLevel: config.LOG_INFO,
