@@ -1,9 +1,9 @@
 import { Injectable, Inject } from '@angular/core';
 import { WEATHER_LIST } from './weather.data';
-import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs/Observable';
+import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import 'rxjs/Rx';
 import { environment } from '../../environments/environment';
+import { Observable } from 'rxjs';
 
 @Injectable()
 export class WeatherService {
@@ -22,7 +22,6 @@ export class WeatherService {
       '&appid=' + environment.appId +
       '&units=' + environment.units
     )
-      .catch(this.handleError);
   }
 
   getWeatherForecast(cityName: string): Observable<any> {
@@ -32,7 +31,7 @@ export class WeatherService {
       '&appid=' + environment.appId +
       '&units=' + environment.units
     )
-      .catch(this.handleError);
+      //.catch(this.handleError);
   }
 
   private extractData(res: any) {

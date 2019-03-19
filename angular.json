@@ -78,6 +78,7 @@
             "main": "src/test.ts",
             "karmaConfig": "./karma.conf.js",
             "tsConfig": "src/tsconfig.json",
+            "codeCoverage": true,
             "scripts": [],
             "styles": [
               "src/styles.css"
