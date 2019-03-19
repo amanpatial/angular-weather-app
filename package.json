@@ -39,6 +39,7 @@
     "@angular/platform-server": "^7.1.0",
     "@angular/language-service": "^7.1.0",
     "@types/jasmine": "~2.8.8",
+    "@types/jasminewd2": "~2.0.3",
     "@types/node": "~8.9.4",
     "jasmine-core": "~2.99.1",
     "jasmine-spec-reporter": "~4.1.0",

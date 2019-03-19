@@ -8,5 +8,5 @@ import { Component } from '@angular/core';
   //styleUrls: ['../style.css']
 })
 export class AppComponent {
-  title = 'Angular2, Weather app works!';
+  title = 'weather app!';
 }
