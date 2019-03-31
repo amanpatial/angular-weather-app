@@ -1,5 +1,5 @@
 {
-  "extends": "../src/tsconfig.json",
+  "extends": "../tsconfig.json",
   "compilerOptions": {
     "outDir": "../out-tsc/app",
     "module": "commonjs",

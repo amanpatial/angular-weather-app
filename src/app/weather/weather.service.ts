@@ -1,6 +1,6 @@
 import { Injectable, Inject } from '@angular/core';
 import { WEATHER_LIST } from './weather.data';
-import { HttpClient, HttpErrorResponse } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 import 'rxjs/Rx';
 import { environment } from '../../environments/environment';
 import { Observable } from 'rxjs';

@@ -4,9 +4,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { APP_CONFIG, AppConfig } from './app.config';
 import { AppComponent } from './app.component';
-import { WeatherListComponent } from './weather/weather-list.component';
-import { WeatherItemComponent } from './weather/weather-item.component';
-import { WeatherSearchComponent } from './weather/weather-search.component';
+import { WeatherListComponent } from './weather/weather-list/weather-list.component';
+import { WeatherItemComponent } from './weather/weather-item/weather-item.component';
+import { WeatherSearchComponent } from './weather/weather-search/weather-search.component';
 import { WeatherService } from './weather/weather.service';
 import { HeaderComponent } from './header/header.component';
 import { PageNotFoundComponent } from './page-not-found.component';
@@ -17,7 +17,7 @@ import { SignupComponent } from './auth/signup/signup.component';
 import { AuthService } from './auth/auth.service';
 import { AuthGuard } from './auth/auth-guard.service';
 import { SignoutComponent } from './auth/signout/signout.component';
-import { TemperatureConverterPipe } from './shared/pipes/temperature-converter-pipe';
+import { TemperatureConverterPipe } from './shared/pipes/temperature-converter.pipe';
 
 @NgModule({
 

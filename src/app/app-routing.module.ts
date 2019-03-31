@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { PageNotFoundComponent }  from './page-not-found.component';
-import { WeatherSearchComponent } from './weather/weather-search.component';
+import { WeatherSearchComponent } from './weather/weather-search/weather-search.component';
 import { WeatherTodayComponent } from './weather-today/weather-today.component';
 import { SigninComponent } from './auth/signin/signin.component';
 import { SignupComponent } from './auth/signup/signup.component';
@@ -23,6 +23,3 @@ const routes: Routes = [
   exports: [ RouterModule ]
 })
 export class AppRoutingModule { }
-
-
-

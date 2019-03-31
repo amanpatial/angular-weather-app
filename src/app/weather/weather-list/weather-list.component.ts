@@ -1,16 +1,14 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { WeatherService } from './weather.service';
-import { Weather } from './weather';
+import { WeatherService } from '../weather.service';
 
 @Component({
   selector: 'weather-list',
   templateUrl: './weather-list.component.html',
-  styleUrls: ['./weather-list.component.css'],
+  styleUrls: ['./weather-list.component.scss'],
   providers: [WeatherService]
 })
 
 export class WeatherListComponent implements OnInit {
-  // tslint:disable-next-line:no-input-rename
   @Input('WeatherForecastList') weathers: any;
   errorMessage: string;
   selectedItem: String = 'nothing';
@@ -28,4 +26,3 @@ export class WeatherListComponent implements OnInit {
 
 
 }
-

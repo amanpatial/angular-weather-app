@@ -1,6 +1,5 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
-import { Weather } from './weather';
-import { EmitterVisitorContext } from '@angular/compiler';
+import { Weather } from '../weather';
 
 @Component({
   selector: 'weather-item',
@@ -18,7 +17,7 @@ export class WeatherItemComponent {
   selectedWeatherItem(event: Event) {
     var item = (<HTMLDivElement>event.target);
     console.log('Selected div element', item);
-    //Raise event 
+    //Raise event
     this.weatherItemChanges.emit(item.innerHTML);
   }
 }

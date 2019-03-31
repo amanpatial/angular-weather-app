@@ -1,5 +1,5 @@
 
-##  Angular2 features 
+##  Angular features 
 
 1. Event and properties binding 
 2. $event passing as object 
@@ -15,6 +15,6 @@
 12. EventEmitter 
 13  Type script life cycle and hooks to each phase 
 14. Static meesage in entire project 
-15. Multilangual - imp
-16. Multiple environment - imp
+15. Multilangual
+16. Multiple environment 
 17. Paging control 

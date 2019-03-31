@@ -1,12 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormControlName, Validators, FormControl } from '@angular/forms';
-import { stat } from 'fs';
-import { STATUS_CODES } from 'http';
+import { FormGroup, Validators, FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-signup',
   templateUrl: './signup.component.html',
-  styleUrls: ['./signup.component.css']
+  styleUrls: ['./signup.component.scss']
 })
 export class SignupComponent implements OnInit {
 
@@ -26,7 +24,7 @@ export class SignupComponent implements OnInit {
       (status) => console.log(status)
     )
 
-    //set default value 
+    //set default value
     this.signupForm.setValue({
       'name': 'Aman',
       'email': 'aman.patial@gmail.com2',
