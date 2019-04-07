@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, FormBuilder, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { APP_CONFIG, AppConfig } from './app.config';
 import { AppComponent } from './app.component';
@@ -18,6 +18,7 @@ import { AuthService } from './auth/auth.service';
 import { AuthGuard } from './auth/auth-guard.service';
 import { SignoutComponent } from './auth/signout/signout.component';
 import { TemperatureConverterPipe } from './shared/pipes/temperature-converter.pipe';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
 
@@ -26,7 +27,8 @@ import { TemperatureConverterPipe } from './shared/pipes/temperature-converter.p
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
+    RouterModule
   ],
 
   declarations: [

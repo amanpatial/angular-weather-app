@@ -14,7 +14,7 @@ const routes: Routes = [
   { path: 'signin', component: SigninComponent },
   { path: 'signup', component: SignupComponent },
   { path: 'signout', component: SignoutComponent },
-  { path: '', redirectTo: '/forecast', pathMatch: 'full' },
+  { path: '', redirectTo: '/signin', pathMatch: 'full' },
   { path: '**', component: PageNotFoundComponent }
 ];
 

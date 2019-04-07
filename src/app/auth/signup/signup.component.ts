@@ -10,6 +10,7 @@ export class SignupComponent implements OnInit {
 
   genders = ['male', 'female'];
   signupForm: FormGroup;
+  submitted: boolean = false;
 
   constructor() { }
 
@@ -32,6 +33,7 @@ export class SignupComponent implements OnInit {
     })
   }
   onSubmit() {
+    this.submitted = true;
     console.log('After submit', this.signupForm);
     console.log('Values', this.signupForm.value);
     //this.signupForm.reset();

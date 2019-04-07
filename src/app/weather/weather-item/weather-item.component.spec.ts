@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { WeatherItemComponent } from './weather-item.component';
+import { TemperatureConverterPipe } from '../../shared/pipes/temperature-converter.pipe';
+import { RouterTestingModule } from '@angular/router/testing';
 
 describe('WeatherItemComponent', () => {
   let component: WeatherItemComponent;
@@ -8,7 +9,8 @@ describe('WeatherItemComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ WeatherItemComponent ]
+      imports: [RouterTestingModule],
+      declarations: [ WeatherItemComponent, TemperatureConverterPipe],
     })
     .compileComponents();
   }));
