@@ -1,8 +1,11 @@
-<nav [ngClass] = "'menu'">
- <!--   <a routerLink="/home" routerLinkActive="active-link">Home</a> |  -->
-   <a routerLink="/today" routerLinkActive="active-link">Today</a> | 
-   <a routerLink="/forecast" routerLinkActive="active-link">Forecast</a>
-</nav>  
-<div>	
-  <router-outlet></router-outlet>	
-</div> 	
+<nav [ngClass]="'menu'">
+  <!--   <a routerLink="/home" routerLinkActive="active-link">Home</a> |  -->
+  <a routerLink="/today" routerLinkActive="active-link">Today</a> |
+  <a routerLink="/forecast" routerLinkActive="active-link">Forecast</a> |
+  <a routerLink="/signin" routerLinkActive="active-link">Sign In</a> |
+  <a routerLink="/signup" routerLinkActive="active-link">Sign Up</a> |
+  <a routerLink="/signout" routerLinkActive="active-link">Sign Out</a>
+</nav>
+<div>
+ <router-outlet></router-outlet>
+</div>

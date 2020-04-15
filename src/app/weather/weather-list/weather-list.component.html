@@ -1,0 +1,4 @@
+<span>You have selected weather record {{ selectedItem }}</span>
+<weather-item *ngFor="let weather of weathers; let i = index;" [WeatherItem]="weather"
+    (weatherItemChanges)="updateSelectedWeatherItem($event)">
+</weather-item>
