@@ -2,5 +2,39 @@
 
 
 body {
-    color: grey;
+    color: darkgrey;
 }
+
+button {
+    font-size: 12px;
+    border-radius: 4px;
+    background-color: white;
+    cursor: pointer;
+    border: none;
+  }
+
+  input {
+    border: 1px solid lightgrey;
+  }
+  
+  body, h1, h2, h3, h4, h5, h6, p, ol, ul {
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+  }
+
+  /*nav {
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    li {
+      display: inline-block;
+    }
+    a {
+      display: block;
+      padding: 6px 12px;
+      text-decoration: none;
+    }
+  } */

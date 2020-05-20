@@ -1,4 +1,4 @@
-<div class="row">
+<div id="container" class="row">
   <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
     <form (ngSubmit)="OnSignin(f)" #f="ngForm">
       <div class="form-group">
@@ -9,7 +9,7 @@
         <label for="password">Password ( e.g. AmanPatial )</label>
         <input type="password" id="password" name="password" ngModel class="form-control">
       </div>
-      <button class="btn btn-primary" type="submit">Sign In</button>
+      <button class="button-report" type="submit">Sign In</button>
     </form>
   </div>
 </div>

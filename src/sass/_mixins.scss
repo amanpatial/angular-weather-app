@@ -1,1 +1,57 @@
 @import './_variables.scss';
+/* create the css code that is to be reused throughout the website. */
+
+// create mixin to reuse
+@mixin important-text {
+    color: red;
+    font-size: 25px;
+    font-weight: bold;
+    border: 1px solid blue;
+}
+
+@mixin special-border {
+    border: 2px solid green;
+}
+
+// mixin includes other mixins
+@mixin special-text {
+    @include important-text;
+    @include special-border;
+}
+
+/* Define mixin with two arguments */
+@mixin bordered($color, $width) {
+    border: $width solid $color;
+}
+
+// Vendor prefixes
+@mixin transform($property) {
+    -webkit-transform: $property;
+    -ms-transform: $property;
+    transform: $property;
+}
+
+@mixin no-word-wrap() {
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
+    -webkit-hyphens: auto;
+    hyphens: auto;
+    overflow: hidden;
+    overflow-wrap: normal;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    word-break: normal;
+}
+
+@mixin hide-text() {
+    font: 0/0 a;
+    color: transparent;
+    text-shadow: none;
+    text-decoration: none;
+    background-color: transparent;
+    border: 0;
+}
+
+@mixin text-hide() {
+    @include hide-text();
+}

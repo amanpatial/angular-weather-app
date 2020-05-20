@@ -1,0 +1,39 @@
+/* Use the variables */
+@import '../../../sass/variables';
+@import '../../../sass/mixins';
+
+
+label {
+    background-color: $bgcolor;
+    color: $textcolor;
+    font-size: $fontsize;
+    font-family: $fontfamily;
+    @include text-hide();
+    // @include special-text();  //call single mixin
+    // @include bordered(blue, 4px);  // Call mixin with two values
+}
+
+input {
+    background-color: $bgcolor;
+    color: $textcolor;
+    font-size: $fontsize;
+    font-family: $fontfamily;
+}
+
+button {
+    background-color: $bgcolor;
+    color: $textcolor;
+    font-size: $fontsize;
+    font-family: $fontfamily;
+    @include transform(rotate(5deg)); // use the mixin to rotate the button 
+}
+
+button-report {
+    @extend button;
+    background-color: red;
+}
+
+
+#container {
+    width: $width;
+}
